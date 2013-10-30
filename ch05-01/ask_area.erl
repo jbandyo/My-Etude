@@ -13,7 +13,7 @@ area() ->
 		rectangle -> Dimensions = get_inputs("Enter width > ", "Enter height > ");
 		triangle  -> Dimensions = get_inputs("Enter base > ", "Enter height > ");
 		ellipse   -> Dimensions = get_inputs("Enter major axis > ", "Enter minor axis > ");
-		unknown   -> Dimensions = {error, "Unknown shape " ++ [Answer]}
+		unknown   -> Dimensions = {unknown, "Unknown shape " ++ [Answer]}
 	end,
     find_area({Shape, element(1, Dimensions), element(2, Dimensions)}).
 
